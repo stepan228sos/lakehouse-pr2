@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" compressed="false">
+  <diagram id="p2-telemetry" name="Вариант 2">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" pageScale="1" pageWidth="1500" pageHeight="885" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Телеметрия холодного склада" style="text;html=1;align=left;verticalAlign=middle;spacing=0;fontSize=39;fontStyle=1;fontColor=#16243A;" vertex="1" parent="1">
+          <mxGeometry x="60" y="24" width="1050" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-source" value="" style="rounded=1;arcSize=22;fillColor=#E9EEF7;strokeColor=#65799C;" vertex="1" parent="1">
+          <mxGeometry x="60" y="89" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-source-label" value="Сбор" style="text;align=left;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="92" y="84" width="100" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-stream" value="" style="rounded=1;arcSize=22;fillColor=#E0F3EF;strokeColor=#458F85;" vertex="1" parent="1">
+          <mxGeometry x="170" y="89" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-stream-label" value="Обработка" style="text;align=left;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="202" y="84" width="100" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-storage" value="" style="rounded=1;arcSize=22;fillColor=#EEEAFB;strokeColor=#8069AE;" vertex="1" parent="1">
+          <mxGeometry x="320" y="89" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-storage-label" value="Хранение" style="text;align=left;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="352" y="84" width="100" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-result" value="" style="rounded=1;arcSize=22;fillColor=#FFF0D8;strokeColor=#BB8748;" vertex="1" parent="1">
+          <mxGeometry x="462" y="89" width="22" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-result-label" value="Результат" style="text;align=left;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="494" y="84" width="100" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Датчики температуры&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;Камеры холодного склада&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E9EEF7;strokeColor=#65799C;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Шлюз сбора&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;UUID, дисковый буфер&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E9EEF7;strokeColor=#65799C;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="435" y="150" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Apache Kafka&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;Журнал исходных событий&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E0F3EF;strokeColor=#458F85;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="810" y="150" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="flink" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Apache Flink&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;Проверка, event time, watermark&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E0F3EF;strokeColor=#458F85;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="150" width="255" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pg" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;PostgreSQL&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;events · dirty_days · rejected_events · daily_reports&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#EEEAFB;strokeColor=#8069AE;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="500" y="355" width="500" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="live" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Потоковый мониторинг&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;SQL по скользящим пяти минутам&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E0F3EF;strokeColor=#458F85;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="225" y="565" width="370" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="batch" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Суточный пересчёт&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;По расписанию и по списку изменённых дат&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#E0F3EF;strokeColor=#458F85;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="905" y="565" width="370" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="screen" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Оперативная панель&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;Замеры и превышения 8 °C&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#FFF0D8;strokeColor=#BB8748;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="225" y="752" width="370" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="report" value="&lt;div style=&quot;font-size:22px;font-weight:bold;&quot;&gt;Суточный отчёт&lt;/div&gt;&lt;div style=&quot;margin-top:6px;font-size:16px;color:#344B63;&quot;&gt;Итоги за дату UTC и номер версии&lt;/div&gt;" style="rounded=1;arcSize=13;whiteSpace=wrap;html=1;fillColor=#FFF0D8;strokeColor=#BB8748;strokeWidth=2;fontColor=#182B43;fontFamily=Arial;align=center;verticalAlign=middle;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="905" y="752" width="370" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-sensor-gateway" style="exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="sensor" target="gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-edge-sensor-gateway" value="Замеры" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="208" y="162" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-gateway-kafka" style="exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="gateway" target="kafka">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-edge-gateway-kafka" value="JSON + UUID" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="582" y="162" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-kafka-flink" style="exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="kafka" target="flink">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-edge-kafka-flink" value="События&lt;br&gt;по offset" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="958" y="152" width="320" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-flink-pg" style="exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="flink" target="pg">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1312.5" y="310" />
+              <mxPoint x="750" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-edge-flink-pg" value="События по UUID и отклонённые записи" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="870" y="271" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-pg-live" style="exitX=0.25;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="pg" target="live">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="625" y="510" />
+              <mxPoint x="410" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-edge-pg-live" value="Уникальные события" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="354" y="471" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-pg-batch" style="exitX=0.75;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="pg" target="batch">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="875" y="510" />
+              <mxPoint x="1090" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-edge-pg-batch" value="События и даты пересчёта" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="833" y="471" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-batch-pg" style="exitX=0.7918918918918919;exitY=0.0;exitDx=0;exitDy=0;entryX=1.0;entryY=0.49056603773584906;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="batch" target="pg">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1198" y="407" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label-edge-batch-pg" value="Новая версия отчёта" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;" vertex="1" parent="1">
+          <mxGeometry x="937" y="369" width="320" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-live-screen" style="exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="live" target="screen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-edge-live-screen" value="Метрики каждые 5 с" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="325" y="694" width="170" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-batch-report" style="exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;edgeStyle=segmentEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2.4;strokeColor=#46617B;" edge="1" parent="1" source="batch" target="report">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label-edge-batch-report" value="Опубликованные итоги" style="text;html=1;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontColor=#31455F;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="694" width="170" height="21" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

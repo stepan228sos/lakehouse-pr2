@@ -1,0 +1,11 @@
+services:
+  demo:
+    image: python:3.12-slim
+    command: ["python", "-u", "/app/demo.py"]
+    environment:
+      PYTHONIOENCODING: utf-8
+    volumes:
+      - type: bind
+        source: ./demo.py
+        target: /app/demo.py
+        read_only: true
